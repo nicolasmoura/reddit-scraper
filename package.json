@@ -2,6 +2,7 @@
   "name": "reddit-scraper",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "server.js"
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -11,13 +12,12 @@
     "e2e": "ng e2e",
     "postinstall": "ng build --aot -prod"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "^5.0.0",
-    "@angular/common": "^5.0.0",
 	"@angular/cli": "^1.6.0",
     "@angular/compiler": "^5.0.0",
     "@angular/compiler-cli": "^5.0.0",
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
@@ -33,13 +33,11 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.0",
-    "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "enhanced-resolve": "^3.3.0"
   },
   "engines": {
-    "node": "6.11.0",
-    "npm": "3.10.10"
+    "node": "~6.11.0",
+    "npm": "~3.10.10"
   }
 }
