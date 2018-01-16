@@ -13,28 +13,31 @@ export class AppComponent {
     public threads: Array<Thread> = [];
     public sendButtonIconConfig = "fa-bomb";
     public alreadyExecuted: boolean = false;
+    public isExecuting: boolean = false;
     constructor(private http: HttpClient, private threadService: ThreadService) {
     }
 
     public getHotThreads() {
-        this.turnOnLoadingGif();
+        this.setExecutionStart();
         this.threads = [];
         this.threadService.getHotThreads(this.subreddits)
             .subscribe(hotThreads => {
                 this.threads = hotThreads;
-                this.turnOffLoadingGif();
+                this.setExecutionStop();
                 this.alreadyExecuted = true;
             }, err => {
                 console.log(err);
             });
     }
 
-    public turnOnLoadingGif() {
+    public setExecutionStart() {
         this.sendButtonIconConfig = 'fa-circle-o-notch fa-spin';
+        this.isExecuting = true;
     }
 
-    public turnOffLoadingGif() {
+    public setExecutionStop() {
         this.sendButtonIconConfig = 'fa-bomb'
+        this.isExecuting = false;
     }
 
 }

@@ -18,7 +18,7 @@
             </div>
         </p-panel>
     </div>
-    <div class="ui-g-8 ui-md-8 ui-sm-12" *ngIf="threads.length == 0 && alreadyExecuted">
+    <div class="ui-g-8 ui-md-8 ui-sm-12" *ngIf="threads.length == 0 && alreadyExecuted && !isExecuting">
         <h3 align="center">Nenhum desses subreddits tem threads bombando :(</h3>
     </div>
     <div class="ui-g-8 ui-md-8 ui-sm-12" *ngIf="threads.length > 0">
