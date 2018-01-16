@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    API_ENDPOINT: 'http://localhost:9876'
+    API_ENDPOINT: 'https://rddt-scraper-api.herokuapp.com'
 };
